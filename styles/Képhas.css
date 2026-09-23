@@ -1,0 +1,83 @@
+:root {
+  --bg: #121314;
+  --h_bg: #191a1b;
+  --border: #2a2b2c;
+  --text_c: #777777;
+  --btn_color: #1F546D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text_c);
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background: var(--h_bg);
+  border-bottom: 1px solid var(--border);
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+header a {
+  text-decoration: none;
+  position: relative;
+  display: inline-flexbox;
+  gap: 10px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--text_c);
+}
+
+header a svg {
+  width: 18px;
+  height: 18px;
+}
+
+header a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width .25s ease;
+}
+
+header a:hover::after{
+  width: 100%;
+}
+
+button{
+  padding: 0;
+  position: relative;
+  display: inline-block;
+
+  width: 50px;
+  height: 25px;
+
+  border-radius: 900px;
+
+  cursor: pointer;
+  background: var(--bg);
+  transition: background-collor .45 ease;
+
+}
+
+main{
+  margin: 20px;
+}
